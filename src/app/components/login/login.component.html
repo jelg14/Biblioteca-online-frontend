@@ -1,0 +1,19 @@
+<form [formGroup]="UsuarioAdministrador">
+    <div class="container">
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" formControlName="usuario" required>
+        <div *ngIf="UsuarioAdministrador.get('usuario').errors && (UsuarioAdministrador.get('usuario').dirty || UsuarioAdministrador.get('usuario').touched)">
+            <p *ngIf="UsuarioAdministrador.get('usuario').hasError('required')"> Campo Obligatorio</p>
+            <p *ngIf="UsuarioAdministrador.get('usuario').hasError('minlength')">El campo debe tener al menos {{UsuarioAdministrador.get('usuario').errors?.minlength.requiredLength}}Caracteres</p>
+        </div>
+    </div>
+    <div class="container">
+        <label for="contraseña">contraseña</label>
+        <input type="password" name="contraseña" formControlName="password" required>
+        <div *ngIf="UsuarioAdministrador.get('password').errors && (UsuarioAdministrador.get('password').dirty || UsuarioAdministrador.get('password').touched)">
+            <p *ngIf="UsuarioAdministrador.get('password').hasError('required')"> Campo Obligatorio</p>
+            <p *ngIf="UsuarioAdministrador.get('password').hasError('minlength')">El campo debe tener al menos {{UsuarioAdministrador.get('password').errors?.minlength.requiredLength}}Caracteres</p>
+        </div>
+    </div>
+    <button (click)="validarDatos()">Ingresar</button>
+</form>

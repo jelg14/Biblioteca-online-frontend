@@ -1,0 +1,35 @@
+<p id="titulo">Libros Y Revistas</p>
+
+<div id="module">
+    <span class="close" (click)="of()">&times;</span>
+    <form action="">
+        <div class="contenedorForm">
+            <label for="autor"><b>Autor</b></label>
+            <input type="text" name="autor" required>
+
+            <label for="edicion"><b>Edicion</b></label>
+            <input type="text" name="nombre" required>
+
+            <label for="Pclave"><b>Palabras clave</b></label>
+            <input type="text" name="pclave" required>
+
+            <label for="descripcion"><b>Descripcion</b></label>
+            <input type="text" name="descripcion" required>
+
+            <label for="temas"><b>Temas</b></label>
+            <input type="text" name="temas" required>
+
+            <label for="copias"><b>Copias</b></label>
+            <input type="text" name="copias" required>
+
+            <label for="disponibles"><b>Disponibles</b></label>
+            <input type="text" name="disponibles" required>
+
+            <button type="submit">Agregar</button>
+
+        </div>
+    </form>
+</div>
+<div>
+    <button (click)="on()">Agregar un libro</button>
+</div>

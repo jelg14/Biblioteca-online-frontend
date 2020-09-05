@@ -1,0 +1,28 @@
+<p id="titulo">Usuarios</p>
+
+<div id="module">
+    <span class="close" (click)="of()">&times;</span>
+    <form action="">
+        <div class="contenedorForm">
+            <label for="carnet"><b>Carnet</b></label>
+            <input type="text" placeholder="Ej. 2018001" name="carnet" required>
+
+            <label for="nombre"><b>Nompre</b></label>
+            <input type="text" name="nombre" required>
+
+            <label for="apellido"><b>apellido</b></label>
+            <input type="text" name="apellido" required>
+
+            <label for="name"><b>Rol</b></label>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Agregar</button>
+
+        </div>
+    </form>
+</div>
+<div>
+    <button (click)="on()">Agregar un usuario</button>
+</div>
