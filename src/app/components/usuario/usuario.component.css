@@ -3,7 +3,16 @@
     text-align: center;
 }
 
-#module {
+#formularioRegistro {
+    display: block;
+}
+
+form {
+    display: none;
+}
+
+#module,
+.editarF {
     position: fixed;
     display: none;
     width: 100%;

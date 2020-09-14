@@ -1,7 +1,17 @@
 <router-outlet></router-outlet>
 <h1>{{titulo}}</h1>
 
-<li>
-    <ul><a routerLink="/login">Iniciar sesion</a></ul>
-    <ul>Acerca De</ul>
-</li>
+
+<button routerLink="/login">Iniciar sesion</button>
+<button (click)="on()">Acerca De</button>
+
+<div id="module">
+
+    <div id="acercaDe">
+        <span class="close" (click)="of()">&times;</span>
+        <h1>ACERCA DE</h1>
+        <p>Nombre: José Eduardo López González</p>
+        <p>Carné: 2018169</p>
+        <p>Curso: 6to. Perito en informatica</p>
+    </div>
+</div>

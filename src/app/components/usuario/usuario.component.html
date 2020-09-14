@@ -2,27 +2,68 @@
 
 <div id="module">
     <span class="close" (click)="of()">&times;</span>
-    <form action="">
+    <form id="formularioRegistro">
+
         <div class="contenedorForm">
+            <h1>Agregar Usuario</h1>
+
             <label for="carnet"><b>Carnet</b></label>
-            <input type="text" placeholder="Ej. 2018001" name="carnet" required>
+            <input type="text" placeholder="Ej. 2018001" [(ngModel)]="carnet" name="carnet" required>
 
             <label for="nombre"><b>Nompre</b></label>
-            <input type="text" name="nombre" required>
+            <input [(ngModel)]="nombre" type="text" name="nombre" required>
 
             <label for="apellido"><b>apellido</b></label>
-            <input type="text" name="apellido" required>
+            <input type="text" name="apellido" [(ngModel)]="apellido" required>
 
-            <label for="name"><b>Rol</b></label>
+            <label for="rol"><b>Rol</b></label>
+            <input type="text" name="rol" [(ngModel)]="rol" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" [(ngModel)]="psw" name="psw" required>
 
-            <button type="submit">Agregar</button>
+            <button type="submit" (click)="agregar()">Agregar</button>
 
         </div>
     </form>
 </div>
 <div>
     <button (click)="on()">Agregar un usuario</button>
+</div>
+
+<div *ngFor="let usuario of usuarios; let i = index">
+    <strong>ID: {{usuario.id}}</strong>
+    <p>Carnet: {{usuario.carnet}}</p>
+    <p>Nombre: {{usuario.nombre}}</p>
+    <p>Apellido: {{usuario.apellido}}</p>
+    <p>Rol: {{usuario.rol}}</p>
+    <button (click)="editar(i)">Editar</button>
+    <button (click)="eliminar(i)">Borrar</button>
+
+    <form>
+        <span class="close" (click)="quitarF(i)">&times;</span>
+        <div class="contenedorForm">
+
+            <h2>ID:{{usuario.id}}</h2>
+
+            <label for="carnet"><b>Carnet</b></label>
+            <input type="text" [(ngModel)]="carnet" name="carnet" id="carnet" required>
+
+            <label for="nombre"><b>Nompre</b></label>
+            <input [(ngModel)]="nombre" type="text" name="nombre" required>
+
+            <label for="apellido"><b>apellido</b></label>
+            <input [(ngModel)]="apellido" type="text" name="apellido" required>
+
+            <label for="rol"><b>Rol</b></label>
+            <input [(ngModel)]="rol" type="text" name="rol" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input [(ngModel)]="psw" type="password" placeholder="Enter Password" name="psw" required>
+
+            <button (click)="actualizar(i)">Actualizar</button>
+
+        </div>
+    </form>
+
 </div>

@@ -12,4 +12,12 @@ export class BibliotecaComponent {
     this.titulo = "BIBLIOTECA";
   }
 
+  on(){
+    document.getElementById("module").style.display="block";
+  }
+
+  of(){
+    document.getElementById("module").style.display="none";
+  }
+
 }

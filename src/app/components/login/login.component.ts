@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgForm,FormGroup, Validators, FormControl} from "@angular/forms";
+import {FormGroup, Validators, FormControl} from "@angular/forms";
 
 @Component({
   selector: 'login',
@@ -8,7 +8,7 @@ import {NgForm,FormGroup, Validators, FormControl} from "@angular/forms";
 })
 export class LoginComponent {
   UsuarioAdministrador = new FormGroup({
-    usuario: new FormControl( "", [Validators.required, Validators.minLength(5)]),
+    usuario: new FormControl( "", Validators.required ),
     password: new FormControl( "", [Validators.required, Validators.minLength(5)])
   });
 
@@ -17,13 +17,17 @@ export class LoginComponent {
 
   validarDatos(){
     if(this.UsuarioAdministrador.valid== true && this.UsuarioAdministrador.value.usuario == "admin" && this.UsuarioAdministrador.value.password == "admin"){
-      console.log("Bienvenido "+this.UsuarioAdministrador.value.usuario);
       document.location.assign('/menuAdministrador');
 
-    }else if(this.UsuarioAdministrador.value.usuario != "admin" || this.UsuarioAdministrador.value.password != "admin"){
-      console.log("El usuario o la contraseña no son de un administrador");
-      alert("ERROR: Datos erroneos")
+    }else if(this.UsuarioAdministrador.valid== true && this.UsuarioAdministrador.value.usuario == "Juan" || this.UsuarioAdministrador.value.password != "asdfg"){
+      document.location.assign('/menuUsuario');
+    }else{
+      alert("ERROR: El usuario que ingreso no existe, ponerse en contacto con el administrador para solicitar su registro");
     }
+  }
+
+  regresar(){
+    document.location.assign(' ');
   }
 
 }

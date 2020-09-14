@@ -16,6 +16,9 @@ export class LibrosYRevistasComponent implements OnInit {
     document.getElementById("module").style.display="none";
   }
 
+  agregar(){
+  }
+
   ngOnInit(): void {
   }
 
