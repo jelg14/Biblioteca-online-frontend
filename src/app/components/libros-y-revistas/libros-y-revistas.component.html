@@ -1,35 +1,164 @@
 <p id="titulo">Libros Y Revistas</p>
 
+
+
 <div id="module">
     <span class="close" (click)="of()">&times;</span>
-    <form action="">
+    <form action="" id="FormularioR">
         <div class="contenedorForm">
+            <h1>Agregar Libro</h1>
+            <label for="titulo"><b>Titulo</b></label>
+            <input type="text" [(ngModel)]="titulo" name="titulo" required>
+            <br>
             <label for="autor"><b>Autor</b></label>
-            <input type="text" name="autor" required>
-
+            <input type="text" name="autor" [(ngModel)]="autor" required>
+            <br>
             <label for="edicion"><b>Edicion</b></label>
-            <input type="text" name="nombre" required>
-
+            <input type="text" name="nombre" [(ngModel)]="edicion" required>
+            <br>
             <label for="Pclave"><b>Palabras clave</b></label>
-            <input type="text" name="pclave" required>
-
+            <input type="text" name="pclave" [(ngModel)]="palabrasClave" required>
+            <br>
             <label for="descripcion"><b>Descripcion</b></label>
-            <input type="text" name="descripcion" required>
-
+            <input type="text" name="descripcion" [(ngModel)]="descripcion" required>
+            <br>
             <label for="temas"><b>Temas</b></label>
-            <input type="text" name="temas" required>
-
+            <input type="text" name="temas" [(ngModel)]="temas" required>
+            <br>
             <label for="copias"><b>Copias</b></label>
-            <input type="text" name="copias" required>
-
+            <input type="text" name="copias" [(ngModel)]="copias" required>
+            <br>
             <label for="disponibles"><b>Disponibles</b></label>
-            <input type="text" name="disponibles" required>
-
-            <button type="submit">Agregar</button>
+            <input type="text" name="disponibles" [(ngModel)]="disponibles" required>
+            <br>
+            <button type="submit" (click)="agregarL()">Agregar</button>
 
         </div>
     </form>
 </div>
+
+<div id="moduloRevista">
+    <span class="close" (click)="ofR()">&times;</span>
+    <form id="formularioRegistro">
+        <div class="contenedorForm">
+            <h1>Agregar Revista</h1>
+            <label for="titulo"><b>Titulo    </b></label>
+            <input type="text" [(ngModel)]="titulo" name="titulo" required>
+            <br>
+            <label for="autor"><b>Autor      </b></label>
+            <input type="text" name="autor" [(ngModel)]="autor" required>
+            <br>
+            <label for="edicion"><b>Edicion</b></label>
+            <input type="text" name="nombre" [(ngModel)]="edicion" required>
+            <br>
+            <br>
+            <label for="Pclave"><b>Palabras clave</b></label> <br>
+            <input type="text" name="pclave" [(ngModel)]="palabrasClave" required>
+            <br>
+            <br>
+            <label for="descripcion"><b>Descripcion</b></label>
+            <input type="text" name="descripcion" [(ngModel)]="descripcion" required>
+            <br>
+            <label for="temas"><b>Temas</b></label>
+            <input type="text" [(ngModel)]="temas" name="temas" required>
+            <br>
+            <label for="copias"><b>Copias</b></label>
+            <input type="text" name="copias" [(ngModel)]="copias" required>
+            <br>
+            <label for="disponibles"><b>Disponibles</b></label>
+            <input type="text" name="disponibles" [(ngModel)]="disponibles" required>
+            <br>
+            <label for="ejemplares"><b>Ejemplares</b></label>
+            <input type="text" name="ejemplares" [(ngModel)]="ejemplares" required>
+            <br>
+            <button type="submit" (click)="agregarR()">Agregar</button>
+
+        </div>
+    </form>
+</div>
+
 <div>
     <button (click)="on()">Agregar un libro</button>
+</div>
+
+<div>
+    <button (click)="onR()">Agregar una revista</button>
+</div>
+
+<div class="dropdown">
+    <h2 class="dropbtn">Buscar por..</h2>
+    <div class="dropdown-content">
+        <a (click)="onBuscarTitulo()">Titulo</a>
+        <a (click)="onBuscarPalabraClave()">Palabras clave</a>
+    </div>
+</div>
+
+<div id="BuscarTitulo">
+    <input type="text" #t placeholder="Buscar por Titulo...">
+    <button (click)="getTitulo(t.value)">Buscar</button>
+</div>
+
+<div id="BuscarPalabraClave">
+    <input type="text" #p placeholder="Buscar por Palabra clave...">
+    <button (click)="getPalabrasClave(p.value)">Buscar</button>
+</div>
+
+<button (click)="mostrarTodo()">Mostrar todos</button>
+
+<div *ngFor="let libre of lr; let i = index">
+    <strong>ID: {{libre.id}}</strong>
+    <p>tipo de Archivo: <strong>{{libre.tipo}}</strong></p>
+    <p>Titulo: {{libre.titulo}}</p>
+    <p>Autor: {{libre.autor}}</p>
+    <p>edicion: {{libre.edicion}}</p>
+    <p>PalabrasClave: {{libre.palabrasClave}}</p>
+    <p>Descripcion: {{libre.descripcion}}</p>
+    <p>Temas: {{libre.temas}}</p>
+    <p>copias: {{libre.copias}}</p>
+    <p>disponibles: {{libre.disponibles}}</p>
+    <p *ngIf="libre.ejemplares > 0">Ejemplares: {{libre.ejemplares}}</p>
+    <button (click)="editarOn(i)">Editar</button>
+    <button (click)="borrar(i)">Borrar</button>
+
+    <form style="display: none;">
+        <span class="close" (click)="ofEd(i)">&times;</span>
+        <div class="contenedorForm">
+            <h1>Editar</h1>
+            <h2>ID: {{libre.id}}</h2>
+            <h2>Tipo de documento: {{libre.tipo}}</h2>
+
+            <label for="titulo"><b>Titulo </b></label>
+            <input type="text" [(ngModel)]="titulo" name="titulo" required>
+            <br>
+            <label for="autor"><b>Autor      </b></label>
+            <input type="text" name="autor" [(ngModel)]="autor" required>
+            <br>
+            <label for="edicion"><b>Edicion</b></label>
+            <input type="text" name="nombre" [(ngModel)]="edicion" required>
+            <br>
+            <br>
+            <label for="Pclave"><b>Palabras clave</b></label> <br>
+            <input type="text" name="pclave" [(ngModel)]="palabrasClave" required>
+            <br>
+            <br>
+            <label for="descripcion"><b>Descripcion</b></label>
+            <input type="text" name="descripcion" [(ngModel)]="descripcion" required>
+            <br>
+            <label for="temas"><b>Temas</b></label>
+            <input type="text" [(ngModel)]="temas" name="temas" required>
+            <br>
+            <label for="copias"><b>Copias</b></label>
+            <input type="text" name="copias" [(ngModel)]="copias" required>
+            <br>
+            <label for="disponibles"><b>Disponibles</b></label>
+            <input type="text" name="disponibles" [(ngModel)]="disponibles" required>
+            <br>
+            <div *ngIf="libre.tipo == 'revista'">
+                <label for="ejemplares"><b>Ejemplares</b></label>
+                <input type="text" name="ejemplares" [(ngModel)]="ejemplares" required>
+            </div>
+            <br>
+            <button type="submit" (click)="actualizar(i)">Agregar</button>
+        </div>
+    </form>
 </div>

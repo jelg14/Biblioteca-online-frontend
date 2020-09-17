@@ -22,6 +22,11 @@ usuarios: Usuario[] = [
 
   on() {
     document.getElementById("module").style.display="block";
+    this.carnet = '';
+    this.nombre = '';
+    this.apellido = '';
+    this.rol = '';
+    this.psw = '';
   }
   of() {
     document.getElementById("module").style.display="none";

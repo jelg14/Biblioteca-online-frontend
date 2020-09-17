@@ -1,0 +1,35 @@
+<div class="dropdown">
+    <h2 class="dropbtn">Buscar por..</h2>
+    <div class="dropdown-content">
+        <a (click)="onBuscarTitulo()">Titulo</a>
+        <a (click)="onBuscarPalabraClave()">Palabras clave</a>
+    </div>
+</div>
+
+<div id="BuscarTitulo">
+    <input type="text" #t placeholder="Buscar por Titulo...">
+    <button (click)="getTitulo(t.value)">Buscar</button>
+</div>
+
+<div id="BuscarPalabraClave">
+    <input type="text" #p placeholder="Buscar por Palabra clave...">
+    <button (click)="getPalabrasClave(p.value)">Buscar</button>
+</div>
+
+<button (click)="mostrarTodo()">Mostrar todos</button>
+
+<div *ngFor="let libre of lr; let i = index">
+    <strong>ID: {{libre.id}}</strong>
+    <p>tipo de Archivo: <strong>{{libre.tipo}}</strong></p>
+    <p>Titulo: {{libre.titulo}}</p>
+    <p>Autor: {{libre.autor}}</p>
+    <p>edicion: {{libre.edicion}}</p>
+    <p>PalabrasClave: {{libre.palabrasClave}}</p>
+    <p>Descripcion: {{libre.descripcion}}</p>
+    <p>Temas: {{libre.temas}}</p>
+    <p>copias: {{libre.copias}}</p>
+    <p>disponibles: {{libre.disponibles}}</p>
+    <p *ngIf="libre.ejemplares > 0">Ejemplares: {{libre.ejemplares}}</p>
+    <button (click)="prestarODevolverLibro(i)">Prestar</button>
+
+</div>

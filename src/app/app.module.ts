@@ -14,6 +14,7 @@ import { MenuUsuarioComponent } from './components/menu-usuario/menu-usuario.com
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { LibrosYRevistasComponent } from './components/libros-y-revistas/libros-y-revistas.component';
 import { ReporteComponent } from './components/reporte/reporte.component';
+import { PrestamoComponent } from './components/prestamo/prestamo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReporteComponent } from './components/reporte/reporte.component';
     MenuUsuarioComponent,
     UsuarioComponent,
     LibrosYRevistasComponent,
-    ReporteComponent
+    ReporteComponent,
+    PrestamoComponent
   ],
   imports: [
     BrowserModule,

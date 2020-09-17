@@ -7,6 +7,7 @@ import { MenuUsuarioComponent } from './components/menu-usuario/menu-usuario.com
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { LibrosYRevistasComponent } from './components/libros-y-revistas/libros-y-revistas.component';
 import {ReporteComponent} from './components/reporte/reporte.component';
+import { PrestamoComponent } from "./components/prestamo/prestamo.component";
 
 const routes: Routes = [
     {path: '', redirectTo: '/biblioteca', pathMatch: 'full'},
@@ -16,8 +17,8 @@ const routes: Routes = [
     {path: 'menuUsuario', component: MenuUsuarioComponent},
     {path: 'usuarios', component: UsuarioComponent},
     {path: 'librosYrevistas', component: LibrosYRevistasComponent},
-    {path: 'reporte', component: ReporteComponent}
-
+    {path: 'reporte', component: ReporteComponent},
+    {path: 'prestamo', component: PrestamoComponent}
 ];
 
 @NgModule({

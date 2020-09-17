@@ -8,7 +8,6 @@ export class Usuario {
     apellido: string;
     rol: string;
     password: string;
-    // palabrasClave : String[];
     constructor(carnet: string, nombre: string, apellido: string, rol: string, password: string, id?: string){
         this.id = id;
         this.carnet = carnet;
