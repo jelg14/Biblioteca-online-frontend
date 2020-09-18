@@ -8,7 +8,7 @@ import { LR } from "../libros-y-revistas/libros-y-revistas.model";
 }) 
 export class PrestamoComponent implements OnInit {
   lr: LR[];
-  lim = 5;
+  lim = 10;
   mostrarTodo(){
     this.lr = this.getL();
   }
@@ -22,7 +22,11 @@ export class PrestamoComponent implements OnInit {
       new LR ('Larten Crepsley: Hermanos hasta la muerte', 'Darren Shan', '2008', ['historia', 'misterio', 'vampiros', 'Darren'], 'Libro final de la saga de Larten Crepsley', ['literatura'], 50, 50, '8', null, 'libro'),
       new LR ('Demonata: Lord Loss', 'Darren Shan', '2007', ['historia', 'cultura', 'arte'], 'Primer libro de la saga Demonata, los demonios pueden estar mas cerca de lo que crees', ['literatura'], 50, 50, '14100011', null, 'libro'),
       new LR ('Cuentos de navidad', 'Autores Varios', '2010', ['historia', 'cultura', 'arte'], 'Hermosos cuentos ideales para la epoca de navidad', ['literatura'], 50, 50, '145', null, 'libro'),
-      new LR ('El conde de Montecristo', 'Alejandro Dumas', '1990', ['historia', 'cultura', 'arte'], 'Un hombre encarcelado injustamente durante 10 años, regresa para buscar venganza', ['literatura'], 50, 50, '1410', null, 'libro')
+      new LR ('El conde de Montecristo', 'Alejandro Dumas', '1990', ['historia', 'cultura', 'arte'], 'Un hombre encarcelado injustamente durante 10 años, regresa para buscar venganza', ['literatura'], 50, 50, '1410', null, 'libro'),
+      new LR ('Historia de Rusia', 'Felipe Ruiz', '2001', ['historia', 'cultura', 'arte'], 'Libro acerca de la historia de Rusia', ['literatura'], 50, 50, '14100001', null, 'libro'),
+      new LR ('Historia de Mexico', 'Felipe Ruiz', '2001', ['historia', 'cultura', 'arte'], 'Libro acerca de la historia de Mexico', ['literatura'], 50, 50, '14', null, 'libro'),
+      new LR ('Historia de Peru', 'Felipe Ruiz', '2001', ['historia', 'cultura', 'arte'], 'Libro acerca de la historia de Peru', ['literatura'], 50, 50, '14100001', null, 'libro'),
+      new LR ('Historia de Brasil', 'Felipe Ruiz', '2001', ['historia', 'cultura', 'arte'], 'Libro acerca de la historia de Brasil', ['literatura'], 50, 50, '14', null, 'libro'),
     ];
     return l;
   }
