@@ -1,1 +1,32 @@
-<p>reporte works!</p>
+<div id="reporte">
+    <div class="regresar">
+        <button style='font-size:24px' (click)="regresar()"><i class='fas fa-arrow-alt-circle-left'></i> Regresar</button>
+    </div>
+    <button (click)="generarPDF()">Generar</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Libros prestados</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Marcos</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Arturo</td>
+                <td>210</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>70</td>
+            </tr>
+        </thead>
+    </table>
+
+    <img src="https://img.icons8.com/color/1600/doughnut-chart.png" alt="grafico">
+</div>

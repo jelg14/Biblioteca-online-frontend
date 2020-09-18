@@ -1,19 +1,31 @@
 <form [formGroup]="UsuarioAdministrador">
+    <br>
+    <div class="imgContainer">
+        <img src="https://image.flaticon.com/icons/png/512/172/172163.png" alt="Login">
+    </div>
+    <br>
+    <br>
     <div class="container">
-        <label for="usuario">Usuario</label>
+        <label for="usuario"> <strong>Usuario</strong></label>
+        <br>
         <input type="text" name="usuario" formControlName="usuario" required>
-        <div *ngIf="UsuarioAdministrador.get('usuario').errors && (UsuarioAdministrador.get('usuario').dirty || UsuarioAdministrador.get('usuario').touched)">
+        <div class="errores" *ngIf="UsuarioAdministrador.get('usuario').errors && (UsuarioAdministrador.get('usuario').dirty || UsuarioAdministrador.get('usuario').touched)">
             <p *ngIf="UsuarioAdministrador.get('usuario').hasError('required')"> Campo Obligatorio</p>
         </div>
     </div>
     <div class="container">
-        <label for="contraseña">contraseña</label>
+        <label for="contraseña"> <strong>contraseña</strong> </label>
+        <br>
         <input type="password" name="contraseña" formControlName="password" required>
-        <div *ngIf="UsuarioAdministrador.get('password').errors && (UsuarioAdministrador.get('password').dirty || UsuarioAdministrador.get('password').touched)">
+        <div class="errores" *ngIf="UsuarioAdministrador.get('password').errors && (UsuarioAdministrador.get('password').dirty || UsuarioAdministrador.get('password').touched)">
             <p *ngIf="UsuarioAdministrador.get('password').hasError('required')"> Campo Obligatorio</p>
             <p *ngIf="UsuarioAdministrador.get('password').hasError('minlength')">El campo debe tener al menos {{UsuarioAdministrador.get('password').errors?.minlength.requiredLength}}Caracteres</p>
         </div>
     </div>
-    <button (click)="validarDatos()">Ingresar</button>
-    <button (click)="regresar()">Cancelar</button>
+    <br>
+    <button id="ingresar" (click)="validarDatos()">Ingresar</button>
+    <button id="cancelar" (click)="regresar()">Cancelar</button>
+    <br>
+    <br>
+    <br>
 </form>

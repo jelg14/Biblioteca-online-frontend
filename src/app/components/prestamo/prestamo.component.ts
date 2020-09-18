@@ -76,7 +76,10 @@ export class PrestamoComponent implements OnInit {
         console.log(this.lim);
       }
     }
-    
+  }
+
+  regresar(){
+    document.location.assign('menuUsuario');
   }
   ngOnInit(): void {
   }

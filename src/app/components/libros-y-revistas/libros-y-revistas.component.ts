@@ -173,6 +173,10 @@ export class LibrosYRevistasComponent implements OnInit {
     document.getElementById('BuscarTitulo').style.display= 'none';
   }
 
+  regresar(){
+    document.location.assign('menuAdministrador');
+  }
+
   
   ngOnInit(): void {
   }

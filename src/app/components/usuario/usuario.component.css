@@ -3,6 +3,12 @@
     text-align: center;
 }
 
+.regresar button {
+    background-color: grey;
+    width: 15%;
+    margin-left: 750px;
+}
+
 #formularioRegistro {
     display: block;
 }

@@ -12,4 +12,10 @@ export class MenuAdministradorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  regresar(){
+    document.location.assign('/login')
+  }
+
+
+
 }

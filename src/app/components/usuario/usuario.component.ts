@@ -16,8 +16,8 @@ export class UsuarioComponent  {
   psw = '';
 
 usuarios: Usuario[] = [
-    new Usuario('2020001', 'Luis',' Garcia', 'estudiante', 'asdfg', '1'),
-    new Usuario('2020002', 'Alex', 'Ramirez', 'estudiante', '123jkl', '2')
+    new Usuario('2020001', 'Luis',' Garcia', 'alumno', 'asdfg', '1'),
+    new Usuario('2020002', 'Alex', 'Ramirez', 'alumno', '123jkl', '2')
   ];
 
   on() {
@@ -89,6 +89,10 @@ usuarios: Usuario[] = [
       alert("No puede ingresar campos vacios");
     }
     
+  }
+
+  regresar(){
+    document.location.assign('menuAdministrador')
   }
 
   constructor() { }

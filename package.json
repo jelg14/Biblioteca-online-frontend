@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@types/jquery": "^3.5.1",
+    "faker": "^5.1.0",
+    "jspdf": "^2.1.1",
+    "jspdf-autotable": "^3.5.13",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -9,6 +9,10 @@ export class MenuUsuarioComponent implements OnInit {
 
   constructor() { }
 
+  regresar(){
+    document.location.assign('/login')
+  }
+  
   ngOnInit(): void {
   }
 

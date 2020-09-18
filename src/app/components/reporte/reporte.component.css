@@ -1,0 +1,55 @@
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #10d4b4;
+    color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+.regresar button {
+    background-color: grey;
+    width: 15%;
+    margin-left: 750px;
+}
+
+td,
+th {
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+}
+
+button {
+    background-color: #1eb3b3;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(76, 138, 167);
+}
+
+td:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+img {
+    width: 450px;
+    height: 450px;
+    margin-left: 700px;
+    margin-top: -400px;
+}

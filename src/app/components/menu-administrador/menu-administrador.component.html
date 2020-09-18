@@ -4,26 +4,29 @@
         <input type="text" name="busqueda" placeholder="buscar..">
     </form>
 </div>
-
+<br>
+<div class="regresar">
+    <button style='font-size:24px' (click)="regresar()"><i class='fas fa-arrow-alt-circle-left'></i> Regresar</button>
+</div>
+<br>
 <div class="contenedor">
-    <img id="usuarioImg" src="https://cdn.pixabay.com/photo/2016/04/15/18/05/computer-1331579_960_720.png " alt="Usuarios">
+    <img class="img" src="https://cdn.pixabay.com/photo/2016/04/15/18/05/computer-1331579_960_720.png " alt="Usuarios">
     <div class="enlace">
         <a routerLink="/usuarios">Usuarios</a>
-    </div>
-</div>
 
-<div class="contenedor2">
-    <img id="LibrosImg" src="https://th.bing.com/th/id/OIP.eLbaHg1WOSs8-RWB6yti9AAAAA?pid=Api&w=256&h=256&rs=1 " alt="Usuarios">
+    </div>
+
+</div>
+<br>
+<div class="contenedor">
+    <img class="img" src="https://th.bing.com/th/id/OIP.eLbaHg1WOSs8-RWB6yti9AAAAA?pid=Api&w=256&h=256&rs=1 " alt="Usuarios">
     <div class="enlace">
         <a routerLink="/librosYrevistas">Libros/Revistas</a>
     </div>
 </div>
-
-
-<div class="contenedor3">
-    <div class="enlace">
-        <img src="https://th.bing.com/th/id/OIP.NhLisokGjZ7ZvfgRtwVBGwHaHa?pid=Api&rs=1" alt="reporte">
-    </div>
+<br>
+<div class="contenedor">
+    <img class="img" src="https://th.bing.com/th/id/OIP.NhLisokGjZ7ZvfgRtwVBGwHaHa?pid=Api&rs=1" alt="reporte">
     <div class="enlace">
         <a routerLink="/reporte">Reporte</a>
     </div>

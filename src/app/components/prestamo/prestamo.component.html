@@ -1,3 +1,9 @@
+<h1>Prestamo/devolucion de Libros</h1>
+
+<div class="regresar">
+    <button style='font-size:24px' (click)="regresar()"><i class='fas fa-arrow-alt-circle-left'></i> Regresar</button>
+</div>
+
 <div class="dropdown">
     <h2 class="dropbtn">Buscar por..</h2>
     <div class="dropdown-content">
@@ -18,7 +24,8 @@
 
 <button (click)="mostrarTodo()">Mostrar todos</button>
 
-<div *ngFor="let libre of lr; let i = index">
+<div style="text-align: center; font-family: Arial, Helvetica, sans-serif; width: 70%; border: 5px solid rgb(60, 60, 136); border-radius: 15px;
+margin-top: 20px; margin-left: 170px;" *ngFor="let libre of lr; let i = index">
     <strong>ID: {{libre.id}}</strong>
     <p>tipo de Archivo: <strong>{{libre.tipo}}</strong></p>
     <p>Titulo: {{libre.titulo}}</p>

@@ -1,5 +1,9 @@
 <p id="titulo">Usuarios</p>
 
+<div class="regresar">
+    <button style='font-size:24px' (click)="regresar()"><i class='fas fa-arrow-alt-circle-left'></i> Regresar</button>
+</div>
+
 <div id="module">
     <span class="close" (click)="of()">&times;</span>
     <form id="formularioRegistro">
@@ -31,7 +35,8 @@
     <button (click)="on()">Agregar un usuario</button>
 </div>
 
-<div *ngFor="let usuario of usuarios; let i = index">
+<div style="text-align: center; font-family: Arial, Helvetica, sans-serif; width: 70%; border: 5px solid rgb(60, 60, 136); border-radius: 15px;
+            margin-top: 20px; margin-left: 170px;" *ngFor="let usuario of usuarios; let i = index">
     <strong>ID: {{usuario.id}}</strong>
     <p>Carnet: {{usuario.carnet}}</p>
     <p>Nombre: {{usuario.nombre}}</p>

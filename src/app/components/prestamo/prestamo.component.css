@@ -5,6 +5,12 @@
     display: none;
 }
 
+.regresar button {
+    background-color: grey;
+    width: 15%;
+    margin-left: 750px;
+}
+
 .dropbtn {
     background-color: #4CAF50;
     color: white;
